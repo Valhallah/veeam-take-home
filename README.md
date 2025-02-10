@@ -29,3 +29,12 @@ Please follow web dev best practices.
 
 * You can send the completed task as a .zip file or a link to an open repository.
 * Please let us know if you have any questions about the task and requirements. And enjoy coding!
+
+# Veeam Software - Test task Dev Notes
+
+Hi, there! my name is Valyn Hall and I'm a candidate for the open UI Developer position. This was a great task! I had to use all my juinor dev just out of school powers to remember all the vanillaJS and plain CSS pitfalls and quirks, it was a fun challenge not using any frameworks. Probably my favorite takehome so far. I appreciate your considration and I'm sorry for taking right up to the wire to finish. I was part of a bridal party in a wedding this weekend and I did get admonished once for coding in between taking pictures, lol. Looking forward to chatting soon!
+
+Peace, love, and JavaScript <3
+
+~Valyn Hall~
+
