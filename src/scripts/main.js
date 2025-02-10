@@ -366,12 +366,12 @@ document.addEventListener("scroll", () => {
   modalOverlay.innerHTML = `
     <div class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
       <button class="modal__close" aria-label="Close dialog">&times;</button>
-      <div class="modal__header" id="modal-title">
+      <div class="modal__header" tabindex="0" id="modal-title">
         <h2>
         Modal Title
         </h2>
       </div>
-      <div class="modal__content">
+      <div class="modal__content" tabindex="0">
         <p>Modal description will appear here.</p>
       </div>
     </div>
@@ -380,33 +380,60 @@ document.addEventListener("scroll", () => {
   
   const modal = modalOverlay.querySelector(".modal");
   const modalClose = modal.querySelector(".modal__close");
+  const modalHeader = modal.querySelector(".modal__header");
+  const modalContent = modal.querySelector(".modal__content");    
+
+  // Function to trap focus within the modal
+const trapFocus = (event) => {
+    const focusableElements = modal.querySelectorAll(
+      'button, a, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstFocusableElement = focusableElements[0];
+    const lastFocusableElement = focusableElements[focusableElements.length - 1];
+  
+    if (event.key === "Tab") {
+      if (event.shiftKey) {
+        // If Shift+Tab and focus is on the first element, move focus to the last
+        if (document.activeElement === firstFocusableElement) {
+          event.preventDefault();
+          lastFocusableElement.focus();
+        }
+      } else {
+        // If Tab and focus is on the last element, move focus to the first
+        if (document.activeElement === lastFocusableElement) {
+          event.preventDefault();
+          firstFocusableElement.focus();
+        }
+      }
+    }
+  };
   
   const showModal = (name, info) => {
-    // Save the last focused element
-    const activeElement = document.activeElement;
-    if (activeElement && activeElement instanceof HTMLElement) {
-      activeElement.setAttribute("data-last-focused", "true");
-    }
-  
-    // Update modal content and display it
-    modal.querySelector("#modal-title h2").textContent = name;
-  
-    // Ensure proper paragraph splitting
-    const paragraphs = info
-      .trim() // Remove any leading or trailing whitespace
-      .split(/\n\s*\n/) // Split by one or more newlines with optional whitespace
-      .map(paragraph => `<p>${paragraph.trim()}</p>`) // Wrap each paragraph
-      .join("");
-  
-    const modalContent = modal.querySelector(".modal__content");
-    modalContent.innerHTML = paragraphs;
-  
-    modalOverlay.hidden = false;
-    modal.setAttribute("aria-hidden", "false");
-  
-    // Move focus to the close button inside the modal
-    modal.querySelector(".modal__close").focus();
-  };
+  // Save the last focused element
+  const activeElement = document.activeElement;
+  if (activeElement && activeElement instanceof HTMLElement) {
+    activeElement.setAttribute("data-last-focused", "true");
+  }
+
+  // Ensure proper paragraph splitting
+  const paragraphs = info
+    .trim()
+    .split(/\n\s*\n/)
+    .map((paragraph) => `<p>${paragraph.trim()}</p>`)
+    .join("");
+
+  const modalContent = modal.querySelector(".modal__content");
+  modalContent.innerHTML = paragraphs;
+
+  modalOverlay.hidden = false;
+  modal.setAttribute("aria-hidden", "false");
+
+  // Focus the title when modal opens
+  modalHeader.focus();
+
+  // Add keydown listener to trap focus
+  document.addEventListener("keydown", trapFocus);
+};
   
   
   const closeModal = () => {
