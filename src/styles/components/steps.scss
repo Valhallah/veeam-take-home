@@ -143,8 +143,8 @@
   cursor: pointer;
 
   @media (max-width: 768px) {
-    margin-bottom: 1rem; // Add spacing between icon and content
-    width: 200px; // Adjust icon size
+    margin-bottom: 1rem;
+    width: 200px;
   }
 
   img {
@@ -180,13 +180,10 @@
     height: 100%;
     backface-visibility: hidden;
     text-align: center;
-    /* Ensure back side is hidden when flipped */
     transition: transform 0.6s ease-in-out;
-    /* Smooth flip animation */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Distribute content vertically */
     align-items: center;
     padding: 2rem;
     line-height: 24px;
@@ -197,7 +194,6 @@
   }
   .step__front {
     transform: rotateY(0deg);
-    /* Default position */
   }
 
   .step__back {
@@ -230,12 +226,10 @@
 
   &[aria-expanded="true"] .step__front {
     transform: rotateY(180deg);
-    /* Flip to hide front */
   }
 
   &[aria-expanded="true"] .step__back {
     transform: rotateY(0deg);
-    /* Flip to reveal back */
   }
 }
 
@@ -249,7 +243,7 @@
 
   /* Space between steps */
   @media (max-width: 480px) {
-    gap: 1.5rem; // Reduce spacing between steps
+    gap: 1.5rem;
   }
 }
 

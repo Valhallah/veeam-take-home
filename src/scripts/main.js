@@ -72,8 +72,6 @@ document.addEventListener("scroll", () => {
   // Attach throttled scroll event listener
   window.addEventListener('scroll', throttle(handleScroll, 16)); // 16ms for ~60fps
   
-  
-  
   // JavaScript to render steps dynamically with alternating layout
   document.addEventListener("DOMContentLoaded", () => {
     const stepsContainer = document.querySelector(".steps__grid");
