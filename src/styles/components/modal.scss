@@ -94,12 +94,12 @@
 }
 
 .modal__content::-webkit-scrollbar {
-    width: 8px; /* Scrollbar width */
-    height: 8px; /* Scrollbar height */
+    width: 8px; 
+    height: 8px;
   }
   
   .modal__content::-webkit-scrollbar-track {
-    background: variables.$primary-color; /* Track color */
+    background: variables.$primary-color; 
   }
   
   .modal__content::-webkit-scrollbar-thumb {
@@ -112,7 +112,7 @@
   
   /* For Firefox */
   .modal__content {
-    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-width: thin; 
     scrollbar-color: variables.$primary-color;
   }
   

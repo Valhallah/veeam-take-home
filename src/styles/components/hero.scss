@@ -62,32 +62,32 @@
     .hero__number {
         position: relative;
         display: flex;
-        bottom: 3.125rem; // 50px
-        margin-right: 1.25rem; // 20px
+        bottom: 3.125rem; 
+        margin-right: 1.25rem;
         color: variables.$primary-color;
         flex-direction: column;
         justify-content: center;
         font-feature-settings: 'ss01' on;
         font-family: "ES Build Variable";
-        font-size: 14.56rem; // 233px
+        font-size: 14.56rem; 
         font-weight: 700;
         line-height: 1.2;
-        letter-spacing: -0.145rem; // -2.33px
+        letter-spacing: -0.145rem;
 
         @media (max-width: 768px) {
             margin: 0 auto 1rem;
-            font-size: 9.375rem; // 150px
-            top: 0.625rem; // 10px
+            font-size: 9.375rem;
+            top: 0.625rem;
         }
 
         @media (max-width: 480px) {
-            font-size: 6.25rem; // 100px
-            top: 2rem; // 32px
+            font-size: 6.25rem;
+            top: 2rem;
         }
     }
 
     .hero__text {
-        width: 43rem; // 688px
+        width: 43rem;
         flex-direction: column;
         height: auto;
 
@@ -101,18 +101,18 @@
             color: variables.$primary-color;
             font-feature-settings: 'ss01' on;
             font-family: "ES Build Variable";
-            font-size: 4rem; // 64px
+            font-size: 4rem;
             font-weight: 700;
-            line-height: 3.75rem; // 60px
-            letter-spacing: -0.04rem; // -0.64px
+            line-height: 3.75rem;
+            letter-spacing: -0.04rem;
 
             @media (max-width: 768px) {
-                font-size: 3rem; // 48px
-                line-height: 3.125rem; // 50px
+                font-size: 3rem;
+                line-height: 3.125rem;
             }
 
             @media (max-width: 480px) {
-                font-size: 2.25rem; // 36px
+                font-size: 2.25rem;
                 line-height: 1.2;
             }
         }
@@ -128,7 +128,7 @@
             }
 
             @media (max-width: 480px) {
-                font-size: 0.875rem; // 14px
+                font-size: 0.875rem;
                 line-height: 1.4;
             }
         }
@@ -150,7 +150,7 @@
         }
 
         @media (max-width: 480px) {
-            font-size: 0.875rem; // 14px
+            font-size: 0.875rem;
             padding: 0.5rem 1.5rem;
         }
     }

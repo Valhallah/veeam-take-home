@@ -369,9 +369,9 @@ document.addEventListener("scroll", () => {
     <div class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
       <button class="modal__close" aria-label="Close dialog">&times;</button>
       <div class="modal__header" id="modal-title">
-      <h2>
-      Modal Title
-      </h2>
+        <h2>
+        Modal Title
+        </h2>
       </div>
       <div class="modal__content">
         <p>Modal description will appear here.</p>
@@ -389,18 +389,27 @@ document.addEventListener("scroll", () => {
     if (activeElement && activeElement instanceof HTMLElement) {
       activeElement.setAttribute("data-last-focused", "true");
     }
+  
     // Update modal content and display it
     modal.querySelector("#modal-title h2").textContent = name;
+  
+    // Ensure proper paragraph splitting
     const paragraphs = info
-      .split("\n\n") // Split by double newlines
-      .map((paragraph) => `<p>${paragraph.trim()}</p>`) // Wrap each paragraph in <p> tags
-      .join(""); // Join all paragraphs into a single string
-    modal.querySelector(".modal__content").innerHTML = paragraphs;
+      .trim() // Remove any leading or trailing whitespace
+      .split(/\n\s*\n/) // Split by one or more newlines with optional whitespace
+      .map(paragraph => `<p>${paragraph.trim()}</p>`) // Wrap each paragraph
+      .join("");
+  
+    const modalContent = modal.querySelector(".modal__content");
+    modalContent.innerHTML = paragraphs;
+  
     modalOverlay.hidden = false;
     modal.setAttribute("aria-hidden", "false");
+  
     // Move focus to the close button inside the modal
     modal.querySelector(".modal__close").focus();
   };
+  
   
   const closeModal = () => {
     if (modal.contains(document.activeElement)) {
