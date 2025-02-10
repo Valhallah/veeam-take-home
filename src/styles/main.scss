@@ -6,7 +6,8 @@
 @use "components/modal";
 @use "components/footer";
 @use "fonts";
-@use "accessibility.scss";
+@use "components/grid-modal";
+@use "accessibility";
 
 /* Reset */
 * {
