@@ -1,0 +1,70 @@
+/* Footer */
+@use "../variables.scss";
+
+.footer {
+    position: relative;
+    /* No need for absolute positioning */
+    text-align: center;
+    padding: 2rem;
+    max-width: 920px;
+    margin: 2rem auto;
+    border-radius: 15px;
+    margin-top: auto;
+    /* Match the SVG border radius */
+    z-index: 1;
+
+    .info-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Place it behind the footer content */
+        pointer-events: none;
+        /* Prevent interaction with the SVG */
+    }
+
+    .footer__textwrap {
+        text-align: left;
+    }
+
+    .footer__text {
+        color: #fff;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .footer__button {
+        background-color: variables.$primary-color;
+        color: #000;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+
+        &:hover {
+            background-color: #00a94a;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.footer {  
+    max-width: 920px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
+  
+    @media (max-width: 480px) {
+      max-width: 100%;
+      padding: 1.5rem;
+    }
+  }

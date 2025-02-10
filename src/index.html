@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Task</title>
+    <link crossorigin="anonymous" rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="reveal-background">
+    <!-- Hero Section -->
+    <section id="hero" class="hero parallax" data-speed="0.3" aria-labelledby="hero-heading">
+        <div class="hero__content-wrapper">
+            <div class="hero__logo">
+                <img src="assets/images/veeam-logo.png" alt="Veeam Logo">
+            </div>
+            <div class="hero__main">
+                <div class="hero__number" aria-label="Step Number">7</div>
+                <div class="hero__text">
+                    <h6 id="hero-heading" class="hero__title">Lorem ipsum dolor sit amet mauris dictum magna</h6>
+                    <p class="hero__description">Lorem ipsum dolor sit amet mauris dictum magna tortor si arcu.</p>
+                    <button class="hero__button" tabindex="0">Lorem Ipsum</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-container">
+        <!-- Transition Text -->
+        <div class="transition__text-container">
+            <section class="transition__text" aria-labelledby="transition-text">
+                <svg class="info-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" fill="none"
+                    preserveAspectRatio="none" role="presentation" aria-hidden="true">
+                    <rect x="1" y="1" width="898" height="198" rx="10" ry="10" fill="none"
+                        stroke="url(#gradient-transition)" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="gradient-transition" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#fff" />
+                            <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <p id="transition-text">
+                    Lorem ipsum dolor sit amet mauris dictum magna tortor si arcu. Lorem ipsum dolor sit amet mauris dictum
+                    magna tortor si arcu. Lorem ipsum dolor sit amet mauris dictum magna tortor si arcu. Lorem ipsum dolor
+                    sit amet mauris dictum magna tortor si arcu.
+                    <br><br>
+                    Lorem ipsum dolor sit amet mauris dictum magna tortor si arcu. Lorem ipsum dolor sit amet mauris dictum
+                    magna tortor si arcu.
+                </p>
+            </section>
+        </div>
+
+        <!-- Steps Section -->
+        <section id="steps" class="steps" aria-labelledby="steps-heading">
+            <h2 id="steps-heading" class="steps__title visually-hidden">Process Steps</h2>
+            <span class="hero__circle-line" aria-hidden="true">
+                <svg width="138" height="717" viewBox="0 0 138 817" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    role="presentation" aria-hidden="true">
+                    <circle cx="27" cy="27" r="27" fill="#00D15F" />
+                    <path d="M138 815H56C39.4315 815 26 801.569 26 785V34.8285C26 30.505 29.505 27 33.8285 27V27"
+                        stroke="#00D15F" stroke-width="4" />
+                </svg>
+            </span>
+            <div class="steps__grid">
+                <!-- Add additional cards dynamically -->
+            </div>
+        </section>
+
+        <div class="modal" id="modal" role="dialog" aria-labelledby="modal-title" hidden>
+            <div class="modal__content">
+                <h2 id="modal-title">Person Name</h2>
+                <p>Short description or details about the person in the image.</p>
+                <button class="modal__close" aria-label="Close dialog">Close</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+            <svg class="info-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 200" fill="none"
+                preserveAspectRatio="none" role="presentation" aria-hidden="true">
+                <rect x="1" y="1" width="918" height="198" rx="15" ry="15" fill="none" stroke="url(#footer-gradient)"
+                    stroke-width="2" />
+                <defs>
+                    <linearGradient id="footer-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#fff" />
+                        <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="footer__textwrap">
+                <p class="footer__text">
+                    <b class="bold__primary">Lorem ipsum dolor sit amet condimentum accumsan</b> Lorem ipsum dolor sit amet condimentum accumsan lorem ipsum dolor sit amet porttitor nam non vestibulum. Dui ante non aptent hac molestie viverra conubia libero letius nostra ut. Diam nam non eu aliquam lobortis felis. lorem ipsum dolor sit amet porttitor nam non vestibulum.
+                </p>
+            </div>
+            <button class="footer__button" tabindex="0">Lorem Ipsum Dolor</button>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
