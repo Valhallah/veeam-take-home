@@ -414,7 +414,7 @@ const trapFocus = (event) => {
   if (activeElement && activeElement instanceof HTMLElement) {
     activeElement.setAttribute("data-last-focused", "true");
   }
-
+  modalHeader.querySelector("h2").textContent = name;
   // Ensure proper paragraph splitting
   const paragraphs = info
     .trim()
